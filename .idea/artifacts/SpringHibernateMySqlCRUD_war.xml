@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringHibernateMySqlCRUD:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SpringHibernateMySqlCRUD.war">
+      <element id="artifact" artifact-name="SpringHibernateMySqlCRUD:war exploded" />
+    </root>
+  </artifact>
+</component>
