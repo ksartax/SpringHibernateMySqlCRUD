@@ -13,6 +13,6 @@ public interface UsersService {
     public void delete(int id);
     public void delete(User user);
     public User get(int id);
-    public User update(User user);
+    public void update(User user);
 
 }

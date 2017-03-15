@@ -38,7 +38,9 @@ public class UsersDaoImpl extends AbstractDao<Integer, User> implements UsersDao
     }
 
     @Override
-    public User update(User user) {
-        return null;
+    public void update(User user) {
+        User entity = get(user.getId_user());
+        entity.setFirstName(user.getFirstName());
+        entity.setLastName(user.getLastName());
     }
 }
