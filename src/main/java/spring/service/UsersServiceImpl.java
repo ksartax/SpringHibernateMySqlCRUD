@@ -28,4 +28,24 @@ public class UsersServiceImpl implements UsersService{
     {
         return usersDao.getAll();
     }
+
+    @Override
+    public void delete(int id) {
+
+    }
+
+    @Override
+    public void delete(User user) {
+
+    }
+
+    @Override
+    public User get(int id) {
+        return usersDao.get(id);
+    }
+
+    @Override
+    public User update(User user) {
+        return null;
+    }
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Damian Stępniak
@@ -11,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-
+    <input value="${user.firstName}">
+    <input value="${user.lastName}">
 </body>
 </html>

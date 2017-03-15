@@ -19,8 +19,9 @@
         <c:forEach items="${users}" var="user">
 
             <tr>
-                <h3>${user.firstName}</h3>
-                <h3>${user.lastName}</h3>
+                ${user.firstName}
+                ${user.lastName}
+                <a href="update-${user.id_user}">Update</a>
             </tr>
 
         </c:forEach>

@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository("usersDao")
 @Transactional
-public class UsersDaoImpl extends AbstractDao<User, Float> implements UsersDao{
+public class UsersDaoImpl extends AbstractDao<Integer, User> implements UsersDao{
 
     @Override
     @SuppressWarnings("unchecked")
@@ -34,7 +34,7 @@ public class UsersDaoImpl extends AbstractDao<User, Float> implements UsersDao{
 
     @Override
     public User get(int id) {
-        return null;
+        return getByKey(id);
     }
 
     @Override

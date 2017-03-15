@@ -57,7 +57,7 @@ public class User implements Serializable{
         this.id_login = id_login;
     }
 
-    public int getId() {
+    public int getId_user() {
         return id_user;
     }
 

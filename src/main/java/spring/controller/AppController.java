@@ -8,6 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.dao.UsersDao;
@@ -27,7 +28,7 @@ import java.util.List;
 public class AppController {
 
     @Autowired
-    private UsersDao usersDao;
+    private UsersService usersDao;
 
     @RequestMapping("/")
     public
@@ -36,7 +37,12 @@ public class AppController {
       return "index";
     }
 
-
+    @RequestMapping("/update-{id}")
+    public
+    String update(@PathVariable int id, ModelMap modelMap){
+        modelMap.addAttribute("user", usersDao.get(id));
+        return "update";
+    }
 
 
 
