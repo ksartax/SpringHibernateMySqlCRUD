@@ -1,6 +1,7 @@
 package spring.dao;
 
 import org.hibernate.Criteria;
+import org.joda.time.LocalDate;
 import org.springframework.stereotype.Repository;
 import spring.model.User;
 
@@ -24,12 +25,12 @@ public class UsersDaoImpl extends AbstractDao<Integer, User> implements UsersDao
 
     @Override
     public void delete(int id) {
-
+        this.getSession().delete(get(id));
     }
 
     @Override
     public void delete(User user) {
-
+        this.getSession().delete(user);
     }
 
     @Override
@@ -42,5 +43,11 @@ public class UsersDaoImpl extends AbstractDao<Integer, User> implements UsersDao
         User entity = get(user.getId_user());
         entity.setFirstName(user.getFirstName());
         entity.setLastName(user.getLastName());
+    }
+
+    @Override
+    public User save(User user) {
+        getSession().persist(user);
+        return user;
     }
 }

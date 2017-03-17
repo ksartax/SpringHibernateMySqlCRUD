@@ -14,6 +14,8 @@
 <body>
     <h1>Witam</h1>
 
+    <a href="/create">Dodaj</a>
+
     <table>
         <tbody>
         <c:forEach items="${users}" var="user">
@@ -22,6 +24,7 @@
                 ${user.firstName}
                 ${user.lastName}
                 <a href="update-${user.id_user}">Update</a>
+                <a href="delete/${user.id_user}">Usun</a>
             </tr>
 
         </c:forEach>

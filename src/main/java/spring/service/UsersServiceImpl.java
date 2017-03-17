@@ -31,12 +31,12 @@ public class UsersServiceImpl implements UsersService{
 
     @Override
     public void delete(int id) {
-
+        usersDao.delete(id);
     }
 
     @Override
     public void delete(User user) {
-
+        usersDao.delete(user);
     }
 
     @Override
@@ -47,5 +47,10 @@ public class UsersServiceImpl implements UsersService{
     @Override
     public void update(User user) {
        usersDao.update(user);
+    }
+
+    @Override
+    public User save(User user) {
+        return usersDao.save(user);
     }
 }
